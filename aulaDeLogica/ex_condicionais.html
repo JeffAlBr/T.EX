@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atividade T.EX</title>
+        
+    </head>
+    <header>
+        
+    </header>
+    <body>
+        <h1>Lógica de Programação - Condicionais</h1>
+    </body>
+    <script>
+        //alert('Javascript')
+        var mensagem, number, palavra, ternArio
+        var h1 = 10
+        let nome = 'Jeferson'
+        var h2 = '10'
+        var h3= 30
+        var z
+        z = true
+        /*
+        console.log(typeof(h1))
+        console.log(typeof(nome))
+        console.log('A variavel h1 é igual a variavel h2 ',h1 == h2)
+        console.log('A variavel h1 é identica a variavel h2 ',h1 === h2)
+        console.log(typeof(h1) == typeof(h2))
+        console.log(typeof(nome) == 'string')
+        console.log(typeof(h1) == 'number')
+        console.log(typeof(mensagem) == 'undefined') 
+        console.log(h1 == h3) //false
+        console.log(h1 >= h3) //false
+        console.log(h1 <= h3) //true
+        console.log(h1 != h3) //true
+        console.log(h1 !== h3) //false
+        console.log(`H1 é <= a H2? ${h1 <= h3 && z}`) //true
+        console.log('H1 é >= a H2? ',h1 >= h3 && z) //false //AND
+        console.log(h1 >= h3 || z) //true //OR
+        */
+
+        //mensagem = 55
+        number = 55
+        palavra = 'exercicio'
+        ternArio = 2
+        //IF
+        if(typeof(mensagem) == 'undefined') {
+            console.log('Condicional if variavel ', typeof(mensagem))
+        }
+        //IF ELSE
+        if(typeof(number) != 'undefined'){
+            console.log('Condicional if else em trabalho/if')
+        }else{
+            console.log('Condicional if else em trabalho/else')
+        }
+        //IF ENCADEADO
+       if(number <= 55){
+            console.log('Condicional if encadeado funcionando/First If')
+        }else{
+            console.log('If Encadeado/else')
+            if(number >= 60){
+                console.log('If Encadeado/Second if')
+            }
+        }
+        //IF ELSE IF
+        if(palavra == 'Exercicio'){
+            console.log('Condicional if else if/2')
+        }else if(palavra != 'exercicio'){
+            console.log('Condicional if else if/2')
+        }else{
+            console.log('Condicional if else if/3')
+        }
+        //TERNÁRIO
+        ternArio >= 3 ? console.log('Operador Ternário part/1') : console.log('Operador Ternário part/2')
+        //SWITCH CASE
+        switch(ternArio){
+            case 1: console.log('Caso 1')
+                break;
+            case 2: console.log('Caso 2')
+                break;
+            case 3: console.log('Caso 3')
+                break;
+            case 4: console.log('Caso 4')
+                break;
+            default: console.log('Default')
+        }
+
+    </script>
+</html>

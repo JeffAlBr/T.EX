@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atividade T.EX</title>     
+    </head>
+    <header>
+        
+    </header>
+    <body>
+        <h1>Lógica de Programação - Exercício 1</h1>
+    </body>
+    <script>
+        var d1,d2,sorteio1,sorteio2,resultado,mensagem,acumulado
+        d1=0
+        d2=0
+        acumulado=0
+
+        for(var i=1;i<=6;i++){
+           
+            function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min);
+            }
+            sorteio1=getRandomInt(1,7)
+
+                for(var n=1;n<=6;n++){
+                     function getRandomInt(min, max) {
+                        min = Math.ceil(min);
+                        max = Math.floor(max);
+                    return Math.floor(Math.random() * (max - min) + min);
+                    }
+                    sorteio2=getRandomInt(1,7)
+                }
+                if((sorteio1+sorteio2)% 2 === 0) acumulado+=1
+
+            //console.log(sorteio1,sorteio2)
+            d1+=sorteio1
+            d2+=sorteio2
+                
+        }
+        console.log(`A soma de d1:'${d1}', mais d2:'${d2}', é igual a:'${d1+d2}'`)
+        if((d1+d2) % 2 === 0) {
+            console.log("A soma é par");
+        }else{
+            console.log("A soma é impar")
+        }
+        console.log(`A quantidade de vezes que retornou par foi de ${acumulado}`)
+        if(acumulado >= 4){
+            console.log('Você ganhou!!!!!')
+        }else{
+            console.log('Não foi dessa vez :(')
+        }
+
+
+    </script>
+</html>

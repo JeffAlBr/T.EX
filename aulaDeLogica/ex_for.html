@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atividade T.EX</title>     
+    </head>
+    <header>
+        
+    </header>
+    <body>
+        <h1>Lógica de Programação - Laços de Repetição</h1>
+    </body>
+    <script>
+        //Inicializador; Condição; Incremento
+        for(let i=0; i <=10; i++){
+            console.log(i)
+        }
+
+        nome=['José','Luis','Jessica','Monica','Douglas']
+        nome.forEach(function(n,i){ //n = ao array nome e o (i) é o indice/numeros
+            console.log(`Nome ${i+1}: ${n}`)
+        });
+
+        for(let i=0; i <=4; i++){
+            console.log(nome[i])    
+        }
+        let j=0
+        for(;j<20;j += 2){
+            console.log(j)
+        }
+        let k=0
+        for(;;k += 10){
+            console.log(k)
+            if(k>=50){
+                break;
+            }
+        }
+        let je=0
+        for(;;){
+            console.log(je)
+            if(je>=300){
+                break;
+            }
+            je+=50
+        }
+        for (let i=0;i<5;i++, console.log(`--${i}`)); //estudar mais, não compreendi completamente
+
+    </script>
+</html>

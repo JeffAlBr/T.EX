@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atividade T.EX</title>     
+    </head>
+    <header>
+        
+    </header>
+    <body>
+        <h1>Lógica de Programação - Objetos</h1>
+    </body>
+    <script>
+       let imovel = {
+            tipo:['Casa','Apartamento','Chacara'],
+            construtora:'Odg Construtora',
+            seguradora:'Seguros S/A',
+            slogan:function(t){
+                console.log(`Venha conhecer a ${this.tipo[t]}. Pronta Entrega`)
+            },
+            beneficios:{
+                administracao:'RH Administra',
+                localizacao:'Rua Jovem Energetico-JR',
+                seguroResidencial:true
+            },
+       }
+       console.log(typeof(imovel))
+       console.log(imovel.constructor)
+       console.log(imovel.tipo)
+       console.log(imovel.slogan(2))
+       console.log(imovel.beneficios.administracao)//notação com ponto
+       console.log(imovel.beneficios)
+       console.log(imovel['construtora'])//notação com colchetes
+       if(imovel.beneficios.seguroResidencial){
+            console.log('Este imovel possui seguro residencial e se localiza em ' + imovel.beneficios.localizacao)
+       }
+       console.log(`Ola nos somos a ${imovel.construtora}, \nqueremos lhe oferecer uma ${imovel.tipo[0]}, \nEla fica na ${imovel.beneficios.localizacao}\nTem seguro? ${imovel.beneficios.seguroResidencial}`)
+
+       imovel.tipo.forEach(function(v,i){
+            console.log(`Opção ${i+1}: ${v}`)
+       })
+
+
+    </script>
+</html>

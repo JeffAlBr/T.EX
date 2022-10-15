@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atividade T.EX</title>     
+    </head>
+    <header>
+        
+    </header>
+    <body>
+        <h1>Lógica de Programação - While / do While</h1>
+    </body>
+    <script>
+       /* O laço while possui uma sintaxe parecida com a do for, porém, em seus parênteses está apenas a condição de parada do loop.
+O iterador do while deve estar presente dentro do seu bloco de códigos a serem executados.
+Existe também o laço do while, que funciona de forma parecida, porém, a condição de parada é verificada depois da execução do código. Logo, o código do laço do while será executado ao menos uma vez. */
+
+        let x=0
+        while(x<5){
+            console.log(`Numero ${x}`)
+            x++ //Iteração depois do console
+        }
+        let w=0
+        //do while -- começo
+        do{
+            w++ //Iteração antes do console
+            console.log(`Number ${w}`)
+            
+        }
+        while(w<5)
+        //do while -- final
+        
+        let miticos=['Dragão','Godzila','Khutullu','Saci','Mula Sem Cabeça']
+        let j=0
+        while(j<miticos.length){
+            console.log(`Mitico ${miticos[j]}`)
+            j++
+        }
+
+    </script>
+</html>

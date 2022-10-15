@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atividade T.EX</title>
+        
+    </head>
+    <header>
+        
+    </header>
+    <body>
+        <h1>Lógica de Programação - Funções</h1>
+    </body>
+    <script>
+        function nomeFuncao(){
+            console.log('Função em ação!')
+        }
+        nomeFuncao() //chamando a função
+        var funcao1 = 'back and'
+        function info(){
+            if(funcao1 == 'back and'){
+                let palavra = `Olá meu nome é Jeferson e apresento a vcs a váriavel ${funcao1}`
+                console.log(palavra)    
+            }       
+        }
+        info() //chamando a função
+        var x,y
+        x = 10
+        y = 5
+        function multiplica(){
+            return console.log(`x * y : ${x*y}`)
+        }
+        multiplica() //chamando a função
+
+        function meusDados(){
+            let nome, idade, cidadeDeNasc, cidadeAtual, curso
+            nome = 'Jeferson Querino dos Santos Filho'
+            idade = 24
+            cidadeDeNasc = 'Arapiraca-AL'
+            cidadeAtual = "Olho D'Água Grande-AL"
+            curso = 'Tecnologo em Análise e Desenvolvimento de Sistemas'
+
+            console.log(`${nome} \n${idade} anos \nNascido em ${cidadeDeNasc} \nAtualmente morando em ${cidadeAtual} \nMatriculado no curso ${curso}`)
+        }
+        meusDados()
+
+        function retornaEu(){
+            var eu = 'Função de retorno'
+            return eu
+        }
+        console.log(retornaEu())
+
+        function multiplica(){ //poderia tbm ter colocado os paramêtros x,y
+            var multiplica1 = `A multiplicação de x * y é : ${x*y}`//Neste caso as variaveis estão pegando os valores globais
+            return multiplica1
+            //console.log(`A multiplicação de x * y é : ${x*y}`) pode substituir return
+        }
+        console.log(multiplica())
+
+        function calculo(x,y){
+            return x * y
+            //console.log(x * y) pode substituir return
+        }
+        console.log(calculo(11,5))
+
+        function calculadora(op,x,y,mensagem){
+            switch(op){
+                case 1:
+                    console.log(`${x} + ${y} = ${x+y}`)
+                    mensagem = 'Soma'
+                    console.log(mensagem)
+                    break;
+                case 2:
+                    console.log(`${x} - ${y} = ${x-y}`)
+                    mensagem = 'Subtração'
+                    console.log(mensagem)
+                    break;
+                case 3:
+                    console.log(`${x} / ${y} = ${x/y}`)
+                    mensagem = 'Divisão'
+                    console.log(mensagem)
+                    break;
+            }
+
+        }
+        console.log(calculadora(1,155,43))
+
+        function livraria(nome){
+            console.log(`Nossa livraria se chama ${nome}`)
+                function autor(escritor){
+                    console.log(`Convidamos a noite de autografos do autor ${escritor}`)
+                }
+                return autor
+        }
+        livraria('Dos Sonhos')('Jeferson') //Função dentro de uma função
+        //Precisa de return para a função mais interna ser acionada
+
+        function A(x){
+            console.log(`Função A - X: ${x}`)
+                function B(y){
+                    console.log(`Função B - x: ${x} - y: ${y}`)
+                        function C(z){
+                            console.log(`Função C - x: ${x} - y: ${y} - z: ${z}`)
+                        }
+                    C(2)
+            }
+            B(4)
+        }
+        A(1)
+
+
+    </script>
+    </html>

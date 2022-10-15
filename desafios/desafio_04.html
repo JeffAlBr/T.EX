@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atividade T.EX</title>     
+    </head>
+    <header>
+        
+    </header>
+    <body>
+        <h1>Lógica de Programação - Exercício 4</h1>
+    </body>
+    <script>
+       let a,b,c
+       a=12
+       b=45
+       c=7
+       var num
+       function decrescente(){
+        num=a
+        if(b > a){
+            num = a
+            a=b
+            b=num
+        }
+        if(c > a){
+            num=a
+            a=c
+            c=num
+        }
+        if(c > b){
+            num=c
+            b=c
+            c=num
+        }
+        console.log(a,b,c)
+       }
+
+    </script>
+</html>

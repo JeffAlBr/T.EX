@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atividade T.EX</title>     
+    </head>
+    <header>
+        
+    </header>
+    <body>
+        <h1>Lógica de Programação - Try Catch</h1>
+    </body>
+    <script>
+       
+       let umaJson = '{nome:"Entre aspas duplas","strings":1998}' //aspas duplas nas strings 
+       
+       try{
+        let docente=JSON.parse(umaJson)
+       }catch(err){
+        console.log('Erro na composição do JSON')
+        console.log(err) 
+       }
+
+       let numero=25
+
+       try{
+        if(typeof(numero) !== 'number') throw `Este não uma variavel do tipo number, seu tipo é ${numero.constructor}`
+        if(typeof(numero) == 'number') throw `Esta variavel contem um numero, seu tipo é ${typeof(numero)}`
+       }catch(err){
+        console.log(err)
+       }
+       console.log('teste 2')
+
+    </script>
+</html>

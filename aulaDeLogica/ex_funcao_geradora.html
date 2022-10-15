@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atividade T.EX</title>     
+    </head>
+    <header>
+        
+    </header>
+    <body>
+        <h1>Lógica de Programação - Váriaveis</h1>
+    </body>
+    <script>
+       function * ex01(num){
+        yield num //5
+        yield num + 10 //15
+        yield num + 5 //10
+       }
+
+       let teste01 = ex01(5)
+       console.log(teste01.next().value)
+            console.log(teste01.next().value)
+                console.log(teste01.next().value)
+        function * idIncremento(){
+            let index = 0
+            while (true)
+            yield index++
+        }
+        let indexIncremento = idIncremento()
+        console.log(indexIncremento.next().value)
+
+        function * gerExterno(num){
+            yield num + 1
+            yield num + 2
+            yield num + 3
+        }
+
+        function * funcaoPrincipal(num){
+            yield num
+            yield * gerExterno(num)
+            yield num * 2
+        }
+        let ger= funcaoPrincipal(5)
+        console.log(ger.next().value)
+            console.log(ger.next().value)
+                console.log(ger.next().value)
+                    console.log(ger.next().value)
+                        console.log(ger.next().value)
+
+    </script>
+</html>

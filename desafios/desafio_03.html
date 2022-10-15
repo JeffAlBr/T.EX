@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atividade T.EX</title>     
+    </head>
+    <header>
+        
+    </header>
+    <body>
+        <h1>Lógica de Programação - Exercício 1</h1>
+    </body>
+    <script>
+       //let sorte
+       let tentativas=1
+        function numDaSorte(){
+            let sorte=parseInt(Math.random()*100+1)
+            return sorte
+        }
+        sorte1=numDaSorte()
+        function mensagem(n){
+            if(n > sorte1 && tentativas <= 6){
+                console.log('Tente um numero menor')
+                tentativas+=1
+            }else if(n < sorte1 && tentativas <= 6){
+                console.log('Tente um numero maior')
+                tentativas+=1
+            }else if(n == sorte1 && tentativas <= 6){
+                console.log('Parabens você Ganhou!!!')
+            }else if(tentativas == 7){
+                console.log('Não foi dessa vez')
+            }
+        }
+        console.log('Olá Seja Bem-Vindo \nVocê tem 6 tentativas para acertar o numero sorteado\nSe em 6 tentativas não conseguir infelizmente você perdera.\nBoa Sorte!')
+        console.log('Para escolher o numero, coloque o numero entre "mensagem(numero)", o numero ira variar entre 1 e 100.')
+        //console.log(sorte1)
+        //console.log(tentativas)
+        
+
+    </script>
+</html>

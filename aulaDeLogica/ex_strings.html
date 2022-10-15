@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atividade T.EX</title>     
+    </head>
+    <header>
+        
+    </header>
+    <body>
+        <h1>Lógica de Programação - Váriaveis</h1>
+    </body>
+    <script>
+        let a,b,c,d
+        a='a'
+        b='b'
+        c='c'
+        d='d'
+        console.log(`A é maior que B: ${a>b}`)
+        console.log(`A é menor que B: ${a<b}`)
+        console.log(`D é maior que B: ${d>b}`)
+        
+        let frase='Lógica com Javascript. Treine sua lógica'
+        let frase2='  Prática e Repetição  '
+        let subfrase=frase.substring(0,6)//0,6 onde 0 é onde deve começar a contar e 6 onde parar
+        let subfrase2=frase.substring(11)//neste caso é apenas onde deve começar
+        let txt=frase.replace( 'Lógica','Aprendendo')
+        let txt1=frase.replace(/javascript/i,'Programação')//i: troca sem se importar com caixa alto ou baixa
+        let txt2=frase.replace(/lógica/ig,'Programação')//g: troca todas que que são iguais
+        let txt3=frase2.trim()
+        let txt4=frase2.trim().toUpperCase()//toLowerCase()
+        console.log(frase)
+        console.log(subfrase)
+        console.log(subfrase2)
+        console.log(txt)
+        console.log(txt1)
+        console.log(txt2)
+        console.log(`Frase com espaços:${frase2}`)
+        console.log(`Frase sem espaços:${txt3}`)
+        console.log(`Frase sem espaços e MAIUSCULAS:${txt4}`)
+
+        let mensagem='Treinamento de fullStack'
+        let email='jefersonqdsf@gmail.com'
+
+        let buscaArroba=email.indexOf('@')
+        let nomeUser=email.substring(0,buscaArroba)
+        let concatenando=txt3.concat(' - ',mensagem)
+        let txt5=mensagem.padStart(mensagem.length+3,'-')
+        let numero= 5
+        let txt6=numero.toString().padEnd(4,'-')
+        let alfa='abcdefghijklmnopqrstuvxywz'
+        console.log(buscaArroba)
+        console.log(nomeUser)
+        console.log(concatenando)
+        console.log(txt5)
+        console.log(txt6)
+        console.log(alfa[3],alfa[1],alfa[5],alfa[20],alfa[6],alfa[9],mensagem[10])
+
+
+    </script>
+</html>

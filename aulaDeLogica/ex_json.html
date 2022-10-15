@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atividade T.EX</title>     
+    </head>
+    <header>
+        
+    </header>
+    <body>
+        <h1>Lógica de Programação - JSON</h1>
+    </body>
+    <script>
+       let estadoCapital= '{"Alagoas": "Maceio","Bahia": "Salvador","São Paulo": "São Paulo"}'
+       //em json as propriedades ficam entre aspas duplas, propriedade é oque esta antes de :
+       console.log(typeof(estadoCapital))
+       let estCapt=JSON.parse(estadoCapital)
+       console.log(estCapt)
+       console.log(typeof(estCapt))
+
+       let empresa={
+            nome1:'Construtora BH',
+            nome2:'Empresarial Lobo',
+            nome3:'Style Vinil',
+            nome4:'GEEK Style'
+       }
+
+       let conEmpresa=JSON.stringify(empresa)//convertido de objeto para string
+       console.log(conEmpresa)
+       let con2Empresa=JSON.parse(JSON.stringify(empresa))//convertendo obejto para string e depois objeto do json
+       let con3Empresa=JSON.parse(JSON.stringify(empresa,['nome1','nome2']))//convertendo obejto para string e depois objeto do json
+       console.log(con2Empresa)
+       console.log(typeof(conEmpresa))
+       console.log(typeof(con2Empresa))
+       console.log(con2Empresa['nome1'])//Em json para puxar uma informação expecifica tens que chamar pelo nome
+       //como esta logo acima, chama a variavel com o json e em colchetes coloca-se o 'nome'
+       console.log(con3Empresa)
+       
+    </script>
+</html>

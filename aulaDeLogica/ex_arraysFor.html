@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atividade T.EX</title>     
+    </head>
+    <header>
+        
+    </header>
+    <body>
+        <h1>Lógica de Programação - Array com For</h1>
+    </body>
+    <script>
+        let animais,regiao,especie
+        especie=""
+        animais=[
+            ['Alasca','Baleia Jubarti','Foca','Lontra'],
+            ['Deserto do Saara','Escorpião','Dromedario','Lagarto'],
+            ['China','Panda','Faisão Dourado','Urso Asiatico']
+        ]
+        for(var i=0;i<animais.length;i++){
+            if(animais[i][0] == 'Deserto do Saara'){
+                regiao=animais[i][0]
+                //console.log(animais[i][0])
+                    for(var n=1;n<animais[i].length;n++){
+                        especie+=`${animais[i][n]} - `
+                        //console.log(animais[i][n])
+                        
+                    }
+            }
+        }
+        console.log(`Região: ${regiao} - Espécies: ${especie}`)
+
+    </script>
+</html>

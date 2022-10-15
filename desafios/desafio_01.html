@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Atividade T.EX</title>     
+    </head>
+    <header>
+        
+    </header>
+    <body>
+        <h1>Lógica de Programação - Exercício 1</h1>
+    </body>
+    <script>
+        //DECLARAÇÃO DE VARIAVEIS E ARRAYS
+        let a1,a2,a3,a4,a5,a6,media,total,taxa,r
+        let array = ['Pedro','Maria','Juliana','Fernando','Rita','Roque']
+        let alunos=[3,4,2,2,1,5]
+        total=0
+
+        //LAÇO FOR PARA SOMAR NOTAS DO ARRAY
+        for(i=0;i < alunos.length;i++){
+            total+=alunos[i]
+        }
+        
+        //CALCULO DE MEDIA E PORCENTAGEM DA NOTA DA SALA
+        media=total/5 
+        taxa=(media/5) * 100
+        //GERANDO UM NUMERO ALEATORIO COM O TAMANHO DO ARRAY
+        r = parseInt(Math.random()*array.length)// *6 em q 6 é a quantidade de nome no array
+        
+        //FUNÇÃO JUNTO A ESTRUTURA DE SELEÇÃO SWITCH
+        function AluNota(nota,n){
+            switch(n){
+                case 1: 
+                nome= array[0]
+                break;
+                case 2: 
+                nome= array[1]
+                break;
+                case 3: 
+                nome= array[2]
+                break;
+                case 4: 
+                nome= array[3]
+                break;
+                case 5: 
+                nome= array[4]
+                break;
+                case 6: 
+                nome= array[5]
+                break;
+            }
+            //IF DENTRO DA FUNÇÃO QUE SERA RESPONSÁVEL POR PEGAR OS VALORES DA VARIAVEL NOME E APRESENTAR CASO ESTE ATENDA O REQUISITO
+            if(nota < 3) console.log(`Aluno(a) ${nome} vai para reforço`)
+            if(nota >= 3 && nota <= 4)console.log(`Aluno(a) ${nome} continuar estudos`)
+            if(nota > 4) console.log(`Aluno(a) ${nome} vai para estagio`)
+
+        }
+        
+        //CONSOLE.LOG ONDE APRESENTARA AS RESPOSTAS PROPOSTAS DO EXERCICIO
+        console.log(`A media na sala foi de ${media}`) //A MEDIA
+        console.log(`A taxa de acerto foi de ${taxa}%`)//A PORCENDATAGEM
+        console.log(`O aluno sorteado foi: ${array[r]}`)//NOME ALEATORIO DE ALUNO
+        //LAÇO FOR ONDE IRA ITERAR OS VALORES E JUNTO A FUNÇÃO OS MOSTRARA NO CONSOLE
+        for(i=0;i<=6;i++){
+            n=i  
+            AluNota(alunos[i],n+1)  
+        }
+
+    </script>
+</html>
