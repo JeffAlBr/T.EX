@@ -13,7 +13,7 @@
     </body>
     <script>
         //DECLARAÇÃO DE VARIAVEIS E ARRAYS
-        let a1,a2,a3,a4,a5,a6,media,total,taxa,r
+        let media,total,taxa,r
         let array = ['Pedro','Maria','Juliana','Fernando','Rita','Roque']
         let alunos=[3,4,2,2,1,5]
         total=0
@@ -66,6 +66,35 @@
         for(i=0;i<=6;i++){
             n=i  
             AluNota(alunos[i],n+1)  
+        }
+/*
+==========================================================================================================
+*/
+/*OUTRO METODO PARA ESCOLHER OS ALUNOS QUE VÃO PARA REFORÇO, ESTÁGIO E QUE PRECISA ESTUDAR MAIS*/
+        var aluNota= [
+            {aluno:'Pedro',nota:3},
+            {aluno:'Maria',nota:4},
+            {aluno:'Juliana',nota:2},
+            {aluno:'Fernando',nota:2},
+            {aluno:'Rita',nota:1},
+            {aluno:'Roque',nota:5}
+        ]
+
+        function teste(){
+            for(var i=0; i<aluNota.length; i++){
+                var nota = aluNota[i].nota
+                var nome = aluNota[i].aluno
+                if(nota < 3){
+                    console.log(`Aluno(a) ${nome} tirou ${nota}, vai para REFORÇO`)
+                }
+                if(nota == 3 || nota == 4){
+                    console.log(`Aluno(a) ${nome} tirou ${nota}, nota MEDIANA`)
+                }
+                if(nota > 4){
+                    console.log(`Aluno(a) ${nome} tirou ${nota}, vai para ESTÁGIO`)
+                }
+                
+            }
         }
 
     </script>
